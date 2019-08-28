@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./estilos.css"></link>
+    <script src="./script.js"></script>
+    <title>Controles</title>
+</head>
+
+<body>
+    <form action="./pagina2.html" method="GET">
+        <fieldset>
+            <legend>Datos Personales</legend>
+
+            <div>
+                <label for="txtNombre">Nombre</label>
+                <input type="text" id="txtNombre" name="nombre" required></input>
+            </div>
+            <div>
+                <label for="txtClave">Contraseña</label>
+                <input type="password" id="txtClave" name="clave" required title="Password" placeholder="Ingrese su clave aqui"></input>
+            </div>
+            <div>
+                <label for="txtEmail">Email</label>
+                <input type="email" id="txtEmail" name="email" required></input>
+            </div>
+            <!-- <div>
+                <label for="txtEdad">Edad</label>
+                <input type="text" id="txtEdad" name="edad" value="23" readonly disabled></input>
+            </div> -->
+            <!-- <div>
+                <label for="txtEdad">Edad</label>
+                <input type="number" id="txtEdad" name="edad" min="18" max="65" value="18"></input>
+            </div> -->
+            <div>
+                <label for="txtEdad">Edad</label>
+                <input type="range" id="txtEdad" name="edad" min="18" max="65" value="18"></input>
+            </div>
+            <div>
+                <!-- <button>Enviar</button> -->
+            </div>
+            <div>
+                <label for="cboPais">Pais</label>
+                <select name="pais" id="cboPais">
+                    <optgroup label="America">
+                        <option value="Argentina">Argentina</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Peru">Peru</option>
+                    </optgroup>
+                    <optgroup label="Europa">
+                        <option value="España" selected>España</option>
+                        <option value="Italia">Italia</option>
+                    </optgroup>
+                </select>
+                <!-- <label for="cboPais">Pais</label>
+                <select name="pais" id="cboPais" multiple>
+                    <optgroup label="America">
+                        <option value="Argentina">Argentina</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Peru">Peru</option>
+                    </optgroup>
+                    <optgroup label="Europa">
+                        <option value="España" selected>España</option>
+                        <option value="Italia">Italia</option>
+                    </optgroup>
+                </select> -->
+            </div>
+
+            <input type="hidden" name=""></input>
+
+            <fieldset>
+                <legend>Genero</legend>
+                <input type="radio" name="sexo" id="rdoMasculino">
+                <label for="rdoMasculino">Masculino</label>
+                </input>
+                <input type="radio" name="sexo" id="rdoFemenino" checked>
+                <label for="rdoFemenino">Femenino</label>
+                </input>
+            </fieldset>
+
+            <fieldset>
+                <legend>Hobbies</legend>
+                <input type="checkbox" id="chkEsqui">
+                <label for="chkEsqui">Esqui</label>
+                </input>
+                <input type="checkbox" id="chkBisicleta">
+                <label for="chkBisicleta">Bicicleta</label>
+                </input>
+                <input type="checkbox" id="chkKayak" checked>
+                <label for="chkKayak">Kayak</label>
+                </input>
+            </fieldset>
+
+            <label for="taComentarios">Comentarios</label>
+            <div>
+                <textarea name="" id="taComentarios" cols="30" rows="10"></textarea>
+            </div>
+            <input type="submit" value="Login"></input>
+            <input type="reset" value="Limpiar Formulario"></input>
+        </fieldset>
+    </form>
+    <button id="btnSaludar">Saludar</button>
+</body>
+
+</html>
