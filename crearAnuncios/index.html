@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./estilos.css">
+    </link>
+    <script src="./script.js"></script>
+    <title>Document</title>
+</head>
+
+<body class="fondo">
+    <div class="contenedor">
+        <form action="./script.js">
+            <fieldset>
+                <legend class="letra">Crear Anuncio</legend>
+
+                <div class="inputForm">
+                    <label class="letra" for="txtNombreAnuncio">Nombre del Anuncio</label>
+                    <input placeholder="Ingrese el nombre del anuncio..." type="text" id="txtNombreAnuncio" name="nombreAnuncio" required></input>
+                </div>
+                <div class="inputForm">
+                    <label class="letra" for="txtDescripcionAnuncio">Descripcion del anuncio</label>
+                    <input placeholder="Ingrese la descripcion del anuncio..." type="text" id="txtDescripcionAnuncio" name="descripcionAnuncio" required></input>
+                </div>
+                <div class="inputForm inputFormNumerico">
+                    <label class="letra" for="txtPrecioAnuncio">Precio</label>
+                    <input type="number" id="numPrecio" name="precioAnuncio" required>
+                </div>
+                <div class="inputForm inputFormNumerico">
+                    <label class="letra" for="numBaños">Cantidad de baños</label>
+                    <input type="number" id="numBaños" name="baños" min="1" max="5" value="1"></input>
+                </div>
+                <div class="inputForm inputFormNumerico">
+                    <label class="letra" for="numDormitorios">Cantidad de dormitorios</label>
+                    <input type="number" id="numDormitorios" name="dormitorios" min="1" max="10" value="1"></input>
+                </div>
+                <div class="inputForm inputFormNumerico">
+                    <label class="letra" for="numCocheras">Cantidad de cocheras</label>
+                    <input type="number" id="numCocheras" name="cocheras" min="1" max="10" value="1"></input>
+                </div>
+            </fieldset>
+            <input type="button" value="Enviar" class="botonAnuncio" id="btnAltaAnuncio">
+        </form>
+    </div>
+</body>
+
+</html>
