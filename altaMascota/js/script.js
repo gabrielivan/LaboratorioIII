@@ -14,7 +14,10 @@ function manejadorSubmit(e){
      let nuevaMascota = obtenerMascota(e.target);
      //console.log(nuevaMascota);
      mascotas.push(nuevaMascota);
-     console.log(mascotas);
+    //  console.log(mascotas);
+    document.getElementById("divTabla").innerHTML = "";
+    document.getElementById("divTabla").appendChild(crearTabla(mascotas));
+
 }
 
 function obtenerMascota(frm){
