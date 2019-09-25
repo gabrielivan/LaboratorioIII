@@ -31,7 +31,6 @@ function enviarDatos(e) {
 
     }
     xhr.open('GET', './servidor.php', true);
-    xhr.setRequestHeader('Content-type', 'Application/x-www-form-urlencoded');
     xhr.send(data);
 
     var tiempo = setTimeout(() => {
