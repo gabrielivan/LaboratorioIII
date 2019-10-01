@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <script src="./js/tableHelper.js"></script>
+    <script src="./js/persona.js"></script>
+    <script src="./js/script.js"></script>
+    <title>Nueva persona</title>
+</head>
+
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>Crear Persona</legend>
+
+            <div class="formgrid">
+
+                <input type="text" id="idPersona" name="idPersona" hidden disabled>
+                <label id="lblId" for="idPersona" hidden>Id</label>
+
+                <input placeholder="Nombre" type="text" id="nombre" name="nombre" required>
+                <label for="nombre">Nombre</label>
+
+                <input placeholder="Apellido" type="text" id="apellido" name="apellido" required>
+                <label for="apellido">Apellido</label>
+
+                <input type="number" id="edad" name="edad" min="1" max="99" value="1">
+                <label for="edad">Edad</label>
+
+                <button type="submit" id="btnCrearModificar">Crear</button>
+                <button type="button" id="btnBorrar" hidden>Borrar</button>
+            </div>
+        </fieldset>
+    </form>
+    <div id="divTabla">
+
+    </div>
+</body>
+
+</html>
