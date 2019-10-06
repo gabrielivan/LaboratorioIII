@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/styles.css"></link>
+    <script src="./js/tableHelper.js"></script>
+    <script src="./js/anuncio.js"></script>
+    <script src="./js/index.js"></script>
+    <title>Controles</title>
+</head>
+
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>Crear Anuncio</legend>
+
+            <div>
+                <input type="text" id="idAnuncio" name="idAnuncio" hidden disabled>
+                <label id="lblId" for="idAnuncio" hidden>Id</label>
+            </div>
+            <div>
+                <label for="txtTitulo">Titulo</label>
+                <input type="text" id="txtTitulo" name="titulo" required></input>
+            </div>
+            <div>
+                <label for="txtClave">Descripcion</label>
+                <input type="text" id="txtDescripcion" name="descripcion" required></input>
+            </div>
+            <div>
+                <label for="txtEmail">Precio</label>
+                <input type="number" id="numPrecio" name="precio" required></input>
+            </div>
+            <div>
+                <label for="txtEmail">Cantidad de baños</label>
+                <input type="number" id="numCantidadBaños" name="cantidadBaños" required></input>
+            </div>
+            <div>
+                <label for="txtEmail">Cantidad de estacionamientos</label>
+                <input type="number" id="numCantidadEstacionamientos" name="cantidadEstacionamientos" required></input>
+            </div>
+            <div>
+                <label for="txtEmail">Cantidad de dormitorios</label>
+                <input type="number" id="numCantidadDormitorios" name="cantidadDormitorios" required></input>
+            </div>
+           
+            <fieldset>
+                <legend>Transaccion</legend>
+                    <input type="radio" name="transaccion" value="Venta" id="venta">
+                    <label for="venta">Venta</label>
+                    <input type="radio" name="transaccion" value="Alquiler" id="alquiler">
+                    <label for="alquiler">Alquiler</label>
+                </input>
+            </fieldset>
+            <input type="submit" id="btnCrearModificar" value="Crear Anuncio"></input>
+            <button type="button" id="btnBorrar" hidden>Borrar</button>
+        </fieldset>
+    </form>
+    <div id="divTabla">
+
+    </div>
+</body>
+
+</html>
