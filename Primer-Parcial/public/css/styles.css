@@ -1,0 +1,33 @@
+form{
+    margin : 30px auto;
+    width: 70%;
+}
+
+.tabla{
+    text-align: center;
+    margin: 10px auto;
+    width : 900px;
+}
+
+body{
+    background-color: rgb(212, 237, 245);
+}
+
+.tabla td, th{
+    padding: 10px;
+}
+
+.inputNotransaccion{
+    width: 500px;
+    border-radius: 5px;
+    margin: 5px;
+    height: 20px;
+}
+
+.fieldsetTransaccion{
+    width: 60%;
+}
+
+.botonCrearMofificar{
+    margin-top: 10px;
+}
