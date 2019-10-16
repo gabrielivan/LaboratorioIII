@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let nombres = ["juan", "ana", "Julia", "Adrian", "Lucia"];
+        let numeros = [2, 4, 3, 5, 6];
+        let personas = [
+            {nombre: "Juan", edad: 30, sexo: "m"},
+            {nombre: "Juana", edad: 21, sexo: "f"},
+            {nombre: "Jaszmin", edad: 47, sexo: "f"},
+            {nombre: "Alfredo", edad: 35, sexo: "m"},
+            {nombre: "Agustin", edad: 29, sexo: "m"},
+            {nombre: "micaela", edad: 19, sexo: "f"}
+        ];
+
+        let hombres = personas.filter(persona => persona.sexo === 'm');
+        console.log(hombres);
+
+        // let edades = hombres.map(hombre => hombre.edad);
+        // console.log(edades);
+
+        // let sumaEdad = edades.reduce((suma, edad) => suma + edad, 0);
+        // console.log(sumaEdad);
+
+        let promedioEdad = personas.filter(persona => persona.sexo === 'm')
+        .map(hombre => hombre.edad)
+        .reduce((suma,edad, indice, array) => suma + edad/ array.length, 0);
+
+        console.log(promedioEdad);
+        
+    </script>
+</body>
+</html>
+

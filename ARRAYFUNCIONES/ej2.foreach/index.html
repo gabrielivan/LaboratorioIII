@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array = ["juan", "ana", true, 23, [1, 2, 3], {nombre: "Jorge", edad: 30}];
+
+        //forma 1
+        array.forEach(mostrar);
+
+        function mostrar(algo){
+            console.log(algo);
+        }
+        
+        //forma 2
+        array.forEach(function(algo){
+            console.log(algo);
+        });
+
+        //forma 3
+        array.forEach(elemento => console.log(elemento));
+        
+    </script>
+</body>
+</html>
+

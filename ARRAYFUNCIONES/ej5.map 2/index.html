@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id = "listaNombres">
+    </ul>
+
+    <script>
+        let array = ["juan", "ana", "Julia", "Adrian", "Lucia"];
+        let numeros = [1, 2, 4, 100, 3, 5, 6];
+        let personas = [
+            {nombre: "Juan", edad: 30},
+            {nombre: "Juana", edad: 21},
+            {nombre: "Jaszmin", edad: 47},
+            {nombre: "Alfredo", edad: 35},
+            {nombre: "Agustin", edad: 29}
+        ];
+
+        let dobles;
+
+        dobles = numeros.map(elemento => elemento * 2);
+        console.log(dobles);
+
+        dobles = numeros.map(elemento => elemento > 2);
+        console.log(dobles);
+        
+        console.log(numeros.map(elemento => elemento > 2));
+
+        let nombres = personas.map(p => p.nombre);
+
+        nombres.forEach(nombre => {
+            let item = document.createElement('li');
+            item.textContent = nombre;
+            document.getElementById('listaNombres').appendChild(item);
+        })
+        
+    </script>
+</body>
+</html>
+

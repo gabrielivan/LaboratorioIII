@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array = ["juan", "ana", "Julia", "Adrian", "Lucia"];
+        let numeros = [1, 2, 4, 100, 3, 5, 6];
+        let personas = [
+            {nombre: "Juan", edad: 30},
+            {nombre: "Juana", edad: 21},
+            {nombre: "Jaszmin", edad: 47},
+            {nombre: "Alfredo", edad: 35},
+            {nombre: "Agustin", edad: 29}
+        ];
+
+        console.log(array.some(elemento => elemento === "Julia"))
+        console.log(array.every(elemento => elemento.includes('a')));
+        console.log(array.every(elemento => elemento.length >= 3));
+
+        console.log(numeros.sort((a, b) => a-b));
+        console.log(numeros.sort());
+        personas.sort((p1, p2) => p1.edad - p2.edad);
+        console.log(personas);
+        
+    </script>
+</body>
+</html>
+

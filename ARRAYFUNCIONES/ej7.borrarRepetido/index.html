@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let nombres = ["juan", "ana", "Julia", "Adrian", "Lucia"];
+        let numeros = [2, 4, 3, 5, 6, 3, 5];
+        let personas = [
+            {nombre: "Juan", edad: 30, sexo: "m"},
+            {nombre: "Juana", edad: 21, sexo: "f"},
+            {nombre: "Jaszmin", edad: 47, sexo: "f"},
+            {nombre: "Alfredo", edad: 35, sexo: "m"},
+            {nombre: "Agustin", edad: 29, sexo: "m"},
+            {nombre: "micaela", edad: 19, sexo: "f"}
+        ];
+
+        let sinRepetir = [...new Set(numeros)];
+
+        console.log(sinRepetir);
+
+        Array.prototype.unique = function() {return [...new Set(this)]};
+        
+        console.log(numeros.unique());
+
+    </script>
+</body>
+</html>
+
