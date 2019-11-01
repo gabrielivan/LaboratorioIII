@@ -1,0 +1,57 @@
+body {
+    background-color: lightgreen;
+}
+
+.tabla {
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-collapse: collapse;
+    width: 1300px;
+}
+
+.tabla,
+.tabla th,
+.tabla td {
+    border: 1px solid black;
+}
+
+.tabla td {
+    text-align: center;
+}
+
+form {
+    margin: 20px auto;
+    width: 500px;
+    border: 1px solid black;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.radios {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.formulario>* {
+    margin: 1px 0;
+}
+
+.radios>div {
+    display: flex;
+    align-items: center;
+}
+
+.radios>div>input {
+    display: flex;
+    align-items: center;
+}
+
+#divTabla {
+    display: flex;
+    place-content: center;
+}
