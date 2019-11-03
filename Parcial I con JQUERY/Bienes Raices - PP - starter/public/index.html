@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- 
+
+            <form id="frm" action="#">
+                <legend>Crear Anuncios</legend>
+                <fieldset>
+                    <div class="formulario">
+                        
+                        <label for="idAnuncio" id="lblId" hidden>ID</label>
+                        <input type="text" name="idAnuncio" id="idAnuncio" hidden disabled>
+                        
+                        <input type="text" name="titulo" id="titulo" required placeholder="Titulo">
+                        
+                        <input type="text" name="descripcion" id="descripcion" required placeholder="Descripcion">
+                        
+                        <input type="text" name="precio" id="precio" required placeholder="Precio">
+                        
+                        <input type="number" name="num_wc" id="num_wc" required placeholder="Cantidad de Baños">
+                        
+                        
+                        <input type="number" name="num_estacionamiento" id="num_estacionamiento" required
+                        placeholder="Cantidad de estacionamiento">
+                        
+                        
+                        <input type="number" name="num_dormitorio" id="num_dormitorio" required
+                        placeholder="Cantidad de Dormitorio">
+                        
+                        <legend>Transaccion</legend>
+                        <fieldset>
+                            <div id="radios">
+                                <div>
+                                    <input type="radio" value="Alquiler" name="transaccion"
+                                    id="transaccionAlquiler">Alquiler
+                                </div>
+                                <div>
+                                    <input type="radio" value="Venta" name="transaccion" id="transaccionVenta">Venta
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    
+                </fieldset>
+                <button type="submit" id="btnCrearModificar">Crear</button>
+                <button type="button" id="btnBorrar" hidden>Borrar</button>
+                <button type="button" id="btnLimpiar" hidden>Limpiar</button>
+            </form>
+        -->
+        <label for="selTransaccion">Transaccion</label>
+        <select name="" id="selTransaccion"></select>
+
+        <label for="selBaños">Cant Baños</label>
+        <select name="" id="selBaños"></select>
+
+        <div class="col-12" id="divChk"></div>
+        <div class="row">
+            <div id="divTabla" class="col-12"></div>
+        </div>
+
+
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./data/data.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/selectHelper.js"></script>
+    <script src="./js/tableHelper.js"></script>
+    <script src="./js/checkBoxHelper.js"></script>
+    <script src="./js/anuncios.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/dispatcher_JQ.js"></script>
+</body>
+
+</html>
