@@ -21,7 +21,7 @@ function crearTabla(array) {
     for (i in array) {
 
         let fila = document.createElement("tr");
-        fila.className = "table-primary";
+        fila.className = "table-success";
         let objeto = array[i];
         for (j in objeto) {
             var celda = document.createElement("td");

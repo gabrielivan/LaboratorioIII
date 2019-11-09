@@ -16,70 +16,21 @@ function inicializarManejadores() {
     $("#lblId").hide();
     $("#btnBorrar").hide();
     $("#btnLimpiar").hide();
-    localStorage.setItem("Anuncios", JSON.stringify(datos));
-    arrayAnuncios = JSON.parse(localStorage.getItem("Anuncios"));
+    
+    arrayAnuncios = init();
     cargarTabla(arrayAnuncios);
 }
 
 function manejadorAlta(e) {
     e.preventDefault();
     let nuevoAnuncio = obtenerAnuncio(e.target, false);
-    //console.log(nuevoAnuncio);
     altaAnuncio(nuevoAnuncio);
-
 }
 
 function manejadorModificar(e) {
     e.preventDefault();
     let anuncio = obtenerAnuncio(e.target, true);
-    //console.log(anuncio);
     modificarAnuncio(anuncio);
-
-}
-
-function modificarAnuncio(anuncio){
-    for(i = 0; i < arrayAnuncios.length; i++)
-    {
-        if(arrayAnuncios[i].id === anuncio.id)
-        {
-            arrayAnuncios.splice(i, 2, anuncio);
-        }
-    }
-    
-    localStorage.setItem("Anuncios", JSON.stringify(arrayAnuncios));
-    limpiarForm();
-    cargarTabla(arrayAnuncios);
-}
-
-
-function borrarAnuncio(){
-    let id = obtenerId(frm);
-    
-    for(i = 0; i < arrayAnuncios.length; i++)
-    {
-        if(arrayAnuncios[i].id === id)
-        {
-            arrayAnuncios.splice(i, 1);
-        }
-    }
-    
-    localStorage.setItem("Anuncios", JSON.stringify(arrayAnuncios));
-    limpiarForm();
-    cargarTabla(arrayAnuncios);
-}
-
-function cargarTabla(array) {
-    let tabla = $("#divTabla");
-    tabla.html("");
-    $('tbody', tabla);
-
-    if (primeraVez === true) {
-        crearBoxes(datos, "divChk");
-        primeraVez = false;
-    }
-    tabla.append(crearTabla(array));
-    let tds = $("td");
-    tds.on("click", setValues);
 }
 
 function filtrarDatos() {
@@ -119,13 +70,6 @@ function filtrarDatos() {
     //Vuelvo a cargar la tabla con los arrayAnuncios filtrados por select y/o por checkbox.
     cargarTabla(datosFiltradosCheckbox);
 }
-
-function altaAnuncio(nuevoAnuncio) {
-    arrayAnuncios.push(nuevoAnuncio);
-    localStorage.setItem("Anuncios", JSON.stringify(arrayAnuncios));
-    cargarTabla(arrayAnuncios);
-}
-
 
 function obtenerAnuncio(frm, tieneId) {
     let titulo;
