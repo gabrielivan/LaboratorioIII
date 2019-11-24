@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "nombre": "Pepe",
+    "apellido": "Perez",
+    "email": "pperez@gmail.com",
+    "edad": "40",
+    "sexo": "Masculino",
+    "tipo": "Diputado"
+  },
+  {
+    "id": 2,
+    "nombre": "Pablo",
+    "apellido": "Gomez",
+    "email": "pgomez@gmail.com",
+    "edad": "33",
+    "sexo": "Masculino",
+    "tipo": "Senador"
+  },
+  {
+    "id": 3,
+    "nombre": "Gabriela",
+    "apellido": "Sabatini",
+    "email": "gsaba@gmail.com",
+    "edad": "28",
+    "sexo": "Femenino",
+    "tipo": "Senador"
+  }
+]
