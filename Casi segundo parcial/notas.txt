@@ -1,9 +1,0 @@
-1.npm install -g typescript
-2.para saber si esta instalado tsc -v
-3.para indicar que es un proyecto (chau variables redeclaradas) tsc --init
-4.para compilar, adentro de scripts
-5. para unificar tsc -outfile output.js hello.ts bye.ts
-6. descomentar outfile y colocar "./output.js"
-7. cambiar module poner amd
-8. paro tsc descomento sourcemap, arranco de nuevo, debe aparecer output.js.map
-9. para jquery npm i @types/jquery y despues npm i jquery, despues referenciarlo antes del output.js
