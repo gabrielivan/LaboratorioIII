@@ -1,5 +1,5 @@
-//Setea en el localStorage a datos con la key = "Anuncios"
-//Obtiene los Anuncios del localStorage y los retorna
+//Setea en el localStorage a datos con la key = "Legisladores"
+//Obtiene los Legisladores del localStorage y los retorna
 function init(){
     localStorage.setItem("Legisladores", JSON.stringify(datos));
     var arrayAux = JSON.parse(localStorage.getItem("Legisladores"));
@@ -10,7 +10,7 @@ function init(){
     return arrayLegisladores;
 }
 
-//Recibe un anucio y lo modifica.
+//Recibe un legislador y lo modifica.
 function modificarLegislador(legislador){
     for(i = 0; i < arrayLegisladores.length; i++)
     {
@@ -25,7 +25,7 @@ function modificarLegislador(legislador){
     cargarTabla(arrayLegisladores);
 }
 
-//borra el anuncio que se haya seleccionado obteniendo el id apartir del frm
+//borra el legislador que se haya seleccionado obteniendo el id apartir del frm
 function borrarLegislador(){
     let id = obtenerId(frm);
     
@@ -42,7 +42,7 @@ function borrarLegislador(){
     cargarTabla(arrayLegisladores);
 }
 
-//Da de alta el anuncio recibido por parametro
+//Da de alta el legislador recibido por parametro
 function altaLegislador(nuevoLegislador) {
     arrayLegisladores.push(nuevoLegislador);
     localStorage.setItem("Legisladores", JSON.stringify(arrayLegisladores));

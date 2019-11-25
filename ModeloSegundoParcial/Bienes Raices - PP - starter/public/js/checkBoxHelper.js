@@ -3,6 +3,7 @@ function crearBoxes(array, seccion) {
     for (atributo in array[0]) {
         if (atributo != "id" && checkType(atributo) == '0' && atributo != 'constructor') {
             let div = document.createElement("div");
+            div.classList.add("form-check");
             div.classList.add("box");
             let labelA = document.createElement("label");
             labelA.htmlFor = "chk_" + atributo;

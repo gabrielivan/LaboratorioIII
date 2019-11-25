@@ -25,6 +25,8 @@ function inicializarManejadores() {
     cargarTabla(arrayLegisladores);
 }
 
+//MANEJADORES
+
 function manejadorAlta(e) {
     e.preventDefault();
     let nuevoLegislador = obtenerLegislador(e.target, false);
@@ -37,13 +39,15 @@ function manejadorModificar(e) {
     modificarLegislador(legislador);
 }
 
+//FUNCIONES
+
 function filtrarDatos() {
     
     let opciones = ['id']; //creo un array de las opciones con el id puesto.
     
     //Aca recorro uno por uno todos los checkbox que esten tildados!!
     $('.box input:checked').each(function() {
-        ///Aca meto en un array todos los valores de los checkbox que esten tildados (titulo, descricion etc)
+        ///Aca meto en un array todos los valores de los checkbox que esten tildados (nombre, apellido etc)
         opciones.push($(this).val());
     });
     
@@ -125,40 +129,41 @@ function obtenerLegislador(frm, tieneId) {
 function setValues(e) {
     let tr = e.target.parentElement;
     let nodos = tr.childNodes;
-    let dato = arrayLegisladores.filter(obj => obj.id == nodos[0].innerText); //obtengo el dato por id, pregunto si el id de la tr que seleccione es igual a algun id del arrayAnuncios 
+    let dato = arrayLegisladores.filter(obj => obj.id == nodos[0].innerText); //obtengo el dato por id, pregunto si el id de la tr que seleccione es igual a algun id del arrayLegisladores 
     
     //ID
     $("#idLegislador").val(dato[0].id);
     $("#idLegislador").show();
     $("#lblId").show();
     
-    //Titulo
+    //Nombre
     $("#txtNombre").val(dato[0].nombre);
     
-    //Descripcion
+    //Apellido
     $("#txtApellido").val(dato[0].apellido);
     
-    //Transaccion
+    //Edad
+    $("#numEdad").val(dato[0].edad);
+    
+    //Email
+    $("#txtEmail").val(dato[0].email);
+    
+    //Tipo
     if (dato[0].tipo == "Senador") {
         $('#tipoSenador').prop('checked', true);
     } else {
         $('#tipoDiputado').prop('checked', true);
     }
 
-    //Transaccion
+    //Sexo
     if (dato[0].sexo == "Male") {
         $('#sexoMasculino').prop('checked', true);
     } else {
         $('#sexoFemenino').prop('checked', true);
     }
     
-    
-    //Precio
-    $("#numEdad").val(dato[0].edad);
-    
-    //Num WC
-    $("#txtEmail").val(dato[0].email);
-    
+    //BOTONES/MANEJADORES
+
     $("#btnCrearModificar").text("Modificar"); //Cambio el nombre del boton Crear por Modificar
     $("#btnBorrar").show(); //muestro el boton de borrar por si en vez de querer modificar desea borrar el objeto seleccionado por tr.
     $("#frm").off('submit', manejadorAlta); //Le saco la funcion de alta al boton submit
@@ -166,6 +171,7 @@ function setValues(e) {
     $("#btnLimpiar").show(); //Muestro el boton de Limpiar
 }
 
+//Obtiene el id del legislador seleccionado del formulario
 function obtenerId(frm) {
     for (element of frm.elements) {
         if (element.name === "legislador") {
@@ -179,16 +185,16 @@ function limpiarForm() {
     let checkboxs = $('.box input');
     checkboxs.prop("checked", true);
     
-    $("#idAnuncio").hide();
+    $("#idLegislador").hide();
     $("#lblId").hide()
-    $("#descripcion").val("");
-    $("#titulo").val("");
-    $("#precio").val("");
-    $("#num_wc").val("");
-    $("#num_estacionamiento").val("");
-    $("#num_dormitorio").val("");
-    $('#transaccionVenta').prop('checked', false);
-    $('#transaccionAlquiler').prop('checked', false);
+    $("#txtNombre").val("");
+    $("#txtApellido").val("");
+    $("#txtEmail").val("");
+    $("#numEdad").val("");
+    $('#tipoDiputado').prop('checked', false);
+    $('#tipoSenador').prop('checked', false);
+    $('#sexoFemenino').prop('checked', false);
+    $('#sexoMasculino').prop('checked', false);
 
     $("#btnCrearModificar").text("Crear");
     $("#btnLimpiar").hide();
@@ -203,12 +209,12 @@ function limpiarForm() {
 function calcularEdad(array) {
     let promedio = array.map(obj => parseInt(obj.edad))
         .reduce((prev, curr) => (prev + curr))/array.length;
-    //$('#txtInfoEdad').val(promedio.toFixed(2));
+    $('#txtInfoEdad').val(promedio.toFixed(2));
 }
 
 function calcularGenderMix(array) {
     let cantidadLegisladores = array.length;
     let cantidadMujeres = array.filter(obj => obj.sexo === "Female").length;
     let genderMix = (cantidadMujeres/cantidadLegisladores) * 100;
-    $('#txtInfoEdad').val(genderMix.toFixed(2));
+    $('#txtInfoGender').val(genderMix.toFixed(2));
 }
