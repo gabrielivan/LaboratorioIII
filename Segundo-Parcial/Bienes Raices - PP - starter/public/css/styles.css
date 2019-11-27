@@ -1,0 +1,20 @@
+.divBotones{
+    margin: 40px 0px;
+}
+.divSexo{
+    margin: 40px 0px 20px;
+    background-color: rgb(101, 194, 197);
+}
+.divTipo{
+    margin: 40px 0px 20px;
+    background-color: rgb(101, 194, 197);
+}
+.divCheckbox{
+    margin: 50px 0px 30px;
+    background-color: rgb(101, 194, 197);
+}
+.divContainerBody{
+    background-color: rgb(189, 222, 223);
+    font-weight:bold;
+    text-transform: capitalize;
+}
